@@ -1,0 +1,23 @@
+.footer{
+  font-family: 'Rubik', sans-serif;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+
+.footerflex{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+
+li{
+  flex-direction: row;
+  list-style-type: none;
+}

@@ -3,6 +3,7 @@ import CatSearch from '../CatSearch/CatSearch';
 import "./FrontPage.css"
 import Footer from '../Footer/Footer.js';
 import FrontShop from './FrontShop.js';
+import Dropdown from '../Dropdown/Dropdown';
 
 
 
@@ -18,10 +19,10 @@ export default class FrontPage extends React.Component{
 
 
         <CatSearch/>
-        
+        <Dropdown/>
+
         <FrontShop/>
         
-
        <Footer/>
       </div>
     );

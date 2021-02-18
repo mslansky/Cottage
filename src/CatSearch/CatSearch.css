@@ -1,0 +1,41 @@
+.CatSearch{
+  left:50px;
+}
+
+
+
+.round {
+  margin: 0 auto;
+  display: block;
+  margin-left: 40%;
+  width: 100%;
+  border-radius: 15px;
+  border: 1px #000 solid;
+  padding: 5px 5px 5px 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+
+.corner {
+  position: absolute;
+  margin-left: 40%;
+  top: 10px;
+  left: 170px;
+  height: 20px;
+  width: 20px;
+  z-index: 10;
+  border-radius: 10px;
+  border: none;
+  background: #000; }
+
+.search {
+  position: relative;
+  width: 190px;
+  height: 30px;
+}
+
+.searchQ{
+  opacity: .3;
+}

@@ -1,26 +1,39 @@
+.FrontShop{
+  margin-top:60px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .grid
  {
+  background-color: #6b9080;
   display: grid;
   grid-template-columns: repeat(3,120px);  
-  grid-template-rows: repeat(3,120px); 
-  grid-gap:5px 2px; /* 50 pixels of space added between rows and 30 pixels added between columns  */
-  margin-top:25px;
+  grid-template-rows: repeat(2,120px); 
+  grid-gap:5px 2px;
+  padding-top: 30px;
+  padding-left: 10px;
+  padding-bottom: 40px;
 }
 
 .grid-item{
- 
   padding:10px;
 }
 .gridImg {
-
+  border-radius: 6px;
   width: 100%;
 } 
 
 .gridImg:hover{
-  box-shadow: 0 0 11px rgba(33,33,33,.4); 
+  box-shadow: 0 0 11px rgba(255,255,255, .7); 
 }
 
-
+.torn-edge {
+  height: 20px;
+  transform: rotate(180deg);
+  margin-bottom: -1px;
+  fill:#6b9080;
+}
 
 @media screen and (min-width: 800px){
   .grid

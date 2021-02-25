@@ -4,6 +4,7 @@ import "./FrontPage.css"
 import Footer from '../Footer/Footer.js';
 import FrontShop from './FrontShop.js';
 import Dropdown from '../Dropdown/Dropdown';
+import CartButton from '../CartButton/CartButton';
 
 
 
@@ -17,7 +18,7 @@ export default class FrontPage extends React.Component{
         <h1 className="bigTitle">Cottage</h1>
         <div className="x2"><img src="https://img.icons8.com/ios-glyphs/30/000000/xbox-cross.png"/></div>
 
-
+        <CartButton/>
         <CatSearch/>
         <Dropdown/>
 

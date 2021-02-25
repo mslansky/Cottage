@@ -1,11 +1,11 @@
-.arrow{
+.cartIcon{
   width: 25px;
   margin: 0 auto;
   display: block;
   position: absolute;
   margin-top:15px;
   margin-bottom: 30px;
-  top: 50px;
-  left: 20px;
+  top: 0;
+  left: 325px;
   z-index: 5;
 }

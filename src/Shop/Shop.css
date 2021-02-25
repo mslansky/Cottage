@@ -1,6 +1,6 @@
 .catItemGrid
  {
-  background-color: #6b9080;
+  background-color: #b6ccfe;
   display: grid;
   grid-template-columns: repeat(3,120px);  
   grid-template-rows: repeat(4,120px); 
@@ -8,7 +8,22 @@
   padding-top: 30px;
   padding-left: 10px;
   padding-bottom: 40px;
+  margin-top:80px;
 }
+
+.torn-edge-shop {
+  height: 20px;
+  transform: rotate(180deg);
+  margin-bottom: -84px;
+  fill:#b6ccfe;
+}
+.torn-edge-shop-bottom {
+  height: 20px;
+  transform: rotate(360deg);
+  margin-top: -1px;
+  fill:#b6ccfe;
+}
+
 
 .grid-cat-item{
   padding:10px;
@@ -20,4 +35,11 @@
 
 .gridCatImg:hover{
   box-shadow: 0 0 11px rgba(71,71,71, .9); 
+}
+
+.categoryTitle{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 50px;
+  font-family: 'Rubik', sans-serif;
 }

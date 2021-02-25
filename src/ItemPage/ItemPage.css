@@ -2,6 +2,8 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  font-family: 'Rubik', sans-serif;
+  
 }
 
 .item-pic{
@@ -11,9 +13,58 @@
 
 .macaron{
   margin-top: 100px;
+  margin-bottom: 30px;;
   display: block;
   margin-left: auto;
   margin-right: auto;
   width: 50%;
   width: 50%;
+  border-radius: 39px;
+  background: #f3f2f2;
+  box-shadow:  23px 23px 46px #e0dfdf,
+             -23px -23px 46px #ffffff;
+}
+
+
+.itemBox{
+  background-color:#b392ac ;
+  margin-top: 60px;
+  margin-bottom:10px;
+  padding: 15px;
+}
+
+.torn-edge-item {
+  height: 20px;
+  transform: rotate(180deg);
+  margin-bottom: -60px;
+  fill:#b392ac;
+}
+.torn-edge-item-bottom {
+  height: 20px;
+  transform: rotate(360deg);
+  margin-top: -10px;
+  fill:#b392ac;
+}
+
+
+.item-price{
+  text-align: center;
+}
+
+
+.item-title{
+  text-align: center;
+}
+
+.item-desc{
+  text-align: center;
+}
+
+.add{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top:20px;
+  font-family: 'Rubik', sans-serif;
+  width: 100px;
 }

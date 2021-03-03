@@ -12,9 +12,9 @@ export default class Dropdown extends React.Component{
               <i class="fa fa-caret-down"></i><img src="https://img.icons8.com/ios-glyphs/30/000000/drag-list-down.png"/>
              </button>
             <div class="dropdown-content">
-              <a href="#">Link 1</a>
-              <a href="#">Link 2</a>
-              <a href="#">Link 3</a>
+              <a href="#">Sweet</a>
+              <a href="#">Savory</a>
+              <a href="#">Satisfying</a>
             </div>
           </div>
       </div>

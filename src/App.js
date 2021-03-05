@@ -9,6 +9,9 @@ import ItemPage from '././ItemPage/ItemPage.js'
 import Shop from '././Shop/Shop.js'
 import Store from './Store/Store';
 import Cart from '././Cart/Cart.js';
+import Login from '././Login/Login.js';
+import Registration from '././Registration/Registration.js';
+import UserContext from './UserContext'
 
 export default class App extends React.Component{
 
@@ -17,55 +20,49 @@ export default class App extends React.Component{
     shops: [],
   }
 
-  componentDidMount() {
-    Promise.all([
-      fetch(`${config.API_ENDPOINT}/items`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
-    ])
-      .then(([itemsRes]) => {
-        if (!itemsRes.ok)
-          return itemsRes.json().then(e => Promise.reject(e))
+  // componentDidMount() {
+  //   Promise.all([
+  //     fetch(`${config.API_ENDPOINT}/items`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+  //   ])
+  //     .then(([itemsRes]) => {
+  //       if (!itemsRes.ok)
+  //         return itemsRes.json().then(e => Promise.reject(e))
 
-        return Promise.all([
-          itemsRes.json(),
-        ])
-      })
-      .then(([items]) => {
-        this.setState({ items })
-      })
-      .catch(error => {
-        console.error({ error })
-      })
-      fetch(`${config.API_ENDPOINT}/shops`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
-      .then(([shopsRes]) => {
-        if (!shopsRes.ok)
-          return shopsRes.json().then(e => Promise.reject(e))
+  //       return Promise.all([
+  //         itemsRes.json(),
+  //       ])
+  //     })
+  //     .then(([items]) => {
+  //       this.setState({ items })
+  //     })
+  //     .catch(error => {
+  //       console.error({ error })
+  //     })
+  //     fetch(`${config.API_ENDPOINT}/shops`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+  //     .then(([shopsRes]) => {
+  //       if (!shopsRes.ok)
+  //         return shopsRes.json().then(e => Promise.reject(e))
 
-        return Promise.all([
-          shopsRes.json(),
-        ])
-      })
-      .then(([shops]) => {
-        this.setState({ shops })
-      })
-      .catch(error => {
-        console.error({ error })
-      })
-  }
-
- 
-
-
-
-
-
-
-
-
+  //       return Promise.all([
+  //         shopsRes.json(),
+  //       ])
+  //     })
+  //     .then(([shops]) => {
+  //       this.setState({ shops })
+  //     })
+  //     .catch(error => {
+  //       console.error({ error })
+  //     })
+  // }
 
   render(){
 
     return (
       <div>
+        <UserContext.Consumer>
+          {userContext => console.log(userContext.user)
+          }
+        </UserContext.Consumer>
         <Router>
           <Switch>
 
@@ -73,20 +70,24 @@ export default class App extends React.Component{
               <FrontPage/>
           </Route>
 
-          <Route path='/Shop'
+          <Route path='/Shop/:category'
           component= {Shop}/>
-    
 
-          <Route path='/ItemPage'
+          <Route path='/ItemPage/:itemId'
           component= {ItemPage}/>
 
-          <Route path='/Store'
+          <Route path='/Store/:storeId'
           component= {Store}/>
 
           <Route path='/Cart'
           component= {Cart}/>
-    
 
+          <Route path='/Login'
+          component= {Login}/>
+
+          <Route path='/Register'
+          component= {Registration}/>
+    
           </Switch>
         </Router>
 

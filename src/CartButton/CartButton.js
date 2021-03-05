@@ -1,5 +1,6 @@
 import React from 'react';
 import "./CartButton.css"
+import { Link } from "react-router-dom";
 
 
 
@@ -8,7 +9,7 @@ export default class CartButton extends React.Component{
     return(
       <div className="CartButton">
        
-       <img src="https://img.icons8.com/pastel-glyph/64/000000/shopping-bag--v3.png" alt="black cart icon" className="cartIcon"/>
+       <Link to="/Cart"><img src="https://img.icons8.com/ios-glyphs/30/000000/add-shopping-cart.png" alt="black cart icon" className="cartIcon"/></Link>
 
       </div>
     );

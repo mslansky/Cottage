@@ -13,8 +13,8 @@ export default class ItemPage extends React.Component{
 
   constructor(props) {
     super(props);
-    //TODO
-    this.itemId = 45;
+    const { itemId } = this.props.match.params
+    this.itemId = itemId;
     this.state={items:[]};
     this.fetchItem = this.fetchItem.bind(this);
   }

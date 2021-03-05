@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from "react-router-dom";
 import "./Back.css"
 
 
@@ -11,7 +11,7 @@ export default class Back extends React.Component{
     return(
       <div className="Back">
       
-          <img src="https://img.icons8.com/android/50/000000/circled-left-2.png" alt="black back arrow icon" className="arrow"/>
+      <Link to="/Store/shopsid"><img src="https://img.icons8.com/ios-filled/50/000000/weverse-shop.png" alt="black back arrow icon" className="arrow"/></Link>
         
        
       </div>

@@ -10,8 +10,8 @@ export default class Footer extends React.Component{
         <div className="footerflex">
         <ul>
           
-          <li>Shop</li>
-          <li>Sell</li>
+          <li>Login</li>
+          <li>Logout</li>
           <li>About</li>
           
         </ul>

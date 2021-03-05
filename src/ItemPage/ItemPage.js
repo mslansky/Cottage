@@ -5,7 +5,7 @@ import Dropdown from '../Dropdown/Dropdown';
 import Back from '../Back/Back.js';
 import CartButton from '../CartButton/CartButton';
 import config from '../config';
-
+import { Link } from "react-router-dom";
 
 
 
@@ -13,14 +13,17 @@ export default class ItemPage extends React.Component{
 
   constructor(props) {
     super(props);
-    const { itemId } = this.props.match.params
+    const { itemId } = this.props.match.params;
     this.itemId = itemId;
-    this.state={items:[]};
     this.fetchItem = this.fetchItem.bind(this);
+
+    this.state={shops:[], items: []};
+    this.fetchShops = this.fetchShops.bind(this);
   }
  
   componentDidMount(){
     this.fetchItem();
+    this.fetchShops();
   }
 
   fetchItem() {
@@ -32,6 +35,19 @@ export default class ItemPage extends React.Component{
     }).then(itemsJson => {
       this.setState(state => ({
         items: itemsJson
+      }))
+    })
+  }
+
+  fetchShops() {
+    fetch(`${config.API_ENDPOINT}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    .then(response => {
+      if(!response.ok)
+        return response.json().then(e => Promise.reject(e))
+      return response.json()
+    }).then(shopsJson => {
+      this.setState(state => ({
+        shops: shopsJson
       }))
     })
   }
@@ -66,7 +82,7 @@ export default class ItemPage extends React.Component{
 
           <div className="item-title-shop">
           {this.state.items.reverse().map((items, index) => (
-            <h1>{items.shop}</h1>
+            <Link to={`/Store/${items.shopId}`}><h1>{items.shop}</h1></Link>
             ))}
           </div>
           

@@ -12,6 +12,7 @@ import Cart from '././Cart/Cart.js';
 import Login from '././Login/Login.js';
 import Registration from '././Registration/Registration.js';
 import UserContext from './UserContext'
+import About from '././About/About.js'
 
 export default class App extends React.Component{
 
@@ -69,6 +70,10 @@ export default class App extends React.Component{
           <Route exact path="/">
               <FrontPage/>
           </Route>
+
+          <Route path='/About'
+          component= {About}/>
+
 
           <Route path='/Shop/:category'
           component= {Shop}/>

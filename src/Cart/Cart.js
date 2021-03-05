@@ -13,18 +13,10 @@ export default class Cart extends React.Component{
       <div className="Cart">
         <Dropdown/>
         <Back/>
-
         <div className="container">
           <CartComponent/>
-
-
-
         </div>
-
-
         <button className="checkout">Checkout</button>
-
-       
         <Footer/>
       </div>
     );

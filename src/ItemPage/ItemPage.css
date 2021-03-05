@@ -60,7 +60,28 @@
 .item-title-shop{
   text-align: center;
   font-size: small;
+  text-decoration: none;
 }
+.item-title-shop a{
+  color:#ffe5d9;
+  text-align: center;
+  font-size: small;
+  text-decoration: none;
+}
+.item-title-shop a:visited{
+  color:#ffe5d9;
+  text-align: center;
+  font-size: small;
+  text-decoration: none;
+}
+.item-title-shop a:hover{
+  color:#faf4d3;
+  text-align: center;
+  font-size: small;
+  text-decoration: none;
+}
+
+
 
 .item-desc{
   text-align: center;

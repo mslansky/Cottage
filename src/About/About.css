@@ -1,0 +1,36 @@
+.About{
+  background-color: black;
+  padding-bottom: 15px;
+}
+
+.abt-title{
+  color: white;
+  margin-top:0;
+  font-size: 60px;
+  font-family: 'Rubik', sans-serif;
+  text-align: left;
+  padding-bottom: 10px;
+  padding-top: 30px;
+  padding-left: 10px;
+}
+
+.abt-intro{
+  color: white;
+  padding:10px;
+  padding-right: 50px;
+  text-align: left;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  padding-bottom: 70px;
+}
+
+.start{
+  width: 20%;
+  margin-left: 40%;
+  margin-right: 30%;
+  font-family: 'Rubik', sans-serif;
+  font-size: 20px;
+  background-color: white;
+  border-radius: 6px;
+  border-style: none;
+}

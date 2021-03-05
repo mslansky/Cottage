@@ -53,17 +53,6 @@ export default class Store extends React.Component{
   }
 
 
-
-
-
-
-
-
-
-
-
-
-
   render(){
     return(
       <div className="store-page">

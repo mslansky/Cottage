@@ -1,0 +1,64 @@
+.fancy-line{
+  border: 0; 
+  height: 1px; 
+  margin-top: 20px;
+  background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0)); 
+  background-image: -moz-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0)); 
+  background-image: -ms-linear-gradient(left, rgba(0,0,0,0), rgba(215,215,215,0.75), rgba(0,0,0,0)); 
+  background-image: -o-linear-gradient(left, rgba(0,0,0,0), rgba(3, 3, 3, 0.75), rgba(0,0,0,0)); 
+  box-shadow: 0px -2px 4px rgba(3, 3, 3, 0.75);
+}
+
+.cartFlex{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  justify-content: space-between;
+  padding:10px;
+  margin-bottom: 10px;
+  background-color: rgba(243, 240, 240, 0.2);
+}
+
+.cartItemImg Img{
+  margin:5px;
+  width: 50%;
+  height: 50%;
+  background: #f3f2f2;
+  box-shadow:  3px 3px 4px #e0dfdf,
+             -3px -3px 4px #ffffff;
+}
+
+.cartAddDelete{
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  
+}
+.cartItemName{
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.quantity{
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-family: 'Rubik', sans-serif;
+}
+
+
+.cartItemPrice{
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 3px;
+  font-family: 'Rubik', sans-serif;
+}
+
+.cartTotal{
+  text-align: right;
+  padding-top: 8px;
+  font-size:20px;
+  font-family: 'Rubik', sans-serif;
+}

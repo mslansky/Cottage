@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import AuthApiService from '../services/auth-api-service'
 import UserContext from '../UserContext'
 import './Login.css'
+import Footer from '../Footer/Footer.js'
 
 class Login extends Component {
   static defaultProps = {
@@ -56,6 +57,10 @@ class Login extends Component {
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
+        
+        <h1 className="bigTitle">Cottage</h1>
+       
+
         <div>
           Username: 
           <input
@@ -80,6 +85,8 @@ class Login extends Component {
           Login
         </button>
       </form>
+
+      <Footer />
       </div>
     )
   }

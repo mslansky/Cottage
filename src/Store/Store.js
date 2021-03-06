@@ -26,6 +26,11 @@ export default class Store extends React.Component{
     this.fetchShopItems();
   }
 
+  componentWillReceiveProps(nextProps){
+    this.fetchShops();
+    this.fetchShopItems();
+  }
+
   fetchShops() {
     fetch(`${config.API_ENDPOINT}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {

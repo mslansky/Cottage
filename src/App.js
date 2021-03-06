@@ -7,6 +7,9 @@ import CatSearch from './CatSearch/CatSearch';
 import Footer from '././Footer/Footer.js'
 import ItemPage from '././ItemPage/ItemPage.js'
 import Shop from '././Shop/Shop.js'
+import SweetShop from '././Shop/SweetShop.js'
+import SavoryShop from '././Shop/SavoryShop.js'
+import SatisfyingShop from '././Shop/SatisfyingShop.js'
 import Store from './Store/Store';
 import Cart from '././Cart/Cart.js';
 import Login from '././Login/Login.js';
@@ -20,41 +23,6 @@ export default class App extends React.Component{
     items: [],
     shops: [],
   }
-
-  // componentDidMount() {
-  //   Promise.all([
-  //     fetch(`${config.API_ENDPOINT}/items`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
-  //   ])
-  //     .then(([itemsRes]) => {
-  //       if (!itemsRes.ok)
-  //         return itemsRes.json().then(e => Promise.reject(e))
-
-  //       return Promise.all([
-  //         itemsRes.json(),
-  //       ])
-  //     })
-  //     .then(([items]) => {
-  //       this.setState({ items })
-  //     })
-  //     .catch(error => {
-  //       console.error({ error })
-  //     })
-  //     fetch(`${config.API_ENDPOINT}/shops`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
-  //     .then(([shopsRes]) => {
-  //       if (!shopsRes.ok)
-  //         return shopsRes.json().then(e => Promise.reject(e))
-
-  //       return Promise.all([
-  //         shopsRes.json(),
-  //       ])
-  //     })
-  //     .then(([shops]) => {
-  //       this.setState({ shops })
-  //     })
-  //     .catch(error => {
-  //       console.error({ error })
-  //     })
-  // }
 
   render(){
 
@@ -74,6 +42,18 @@ export default class App extends React.Component{
           <Route path='/About'
           component= {About}/>
 
+
+          <Route path='/Shop/Sweet'
+          component= {SweetShop}/>
+
+          <Route path='/Shop/Savory'
+          component= {SavoryShop}/>
+
+          <Route path='/Shop/Satisfying'
+          component= {SatisfyingShop}/>
+
+          <Route path='/Shop/:category'
+          component= {Shop}/>
 
           <Route path='/Shop/:category'
           component= {Shop}/>

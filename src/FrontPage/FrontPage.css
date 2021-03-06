@@ -1,9 +1,11 @@
 .bigTitle{
-  margin-top: 20%;
+  margin-top:20%;
   font-size: 60px;
   font-family: 'Rubik', sans-serif;
   text-align: center;
   padding-bottom: 0px;
+ 
+  
 }
 
 .x1{
@@ -13,7 +15,7 @@
   margin-left: auto;
   margin-right: auto;
   top: 85px;
-  left: 45px;
+  left: 55px;
  
 }
 
@@ -24,7 +26,6 @@
   margin-right: auto;
   top: -55px;
   left: 300px;
-  
 }
 
 @media screen and (min-width: 800px){

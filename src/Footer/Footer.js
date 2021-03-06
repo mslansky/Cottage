@@ -1,22 +1,16 @@
 import React from 'react';
 import "./Footer.css"
-
+import { Link } from "react-router-dom";
 
 
 export default class Footer extends React.Component{
   render(){
     return(
       <div className="footer">
-        <div className="footerflex">
         <ul>
-          
-          <li>Login</li>
-          <li>Logout</li>
-          <li>About</li>
-          
+        <Link to="/About"><li className="abt-link">About</li></Link>
+          <li>Login/Logout</li>
         </ul>
-        </div>
-         
       </div>
     );
   }

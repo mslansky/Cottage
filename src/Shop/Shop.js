@@ -6,16 +6,14 @@ import CatSearch from '../CatSearch/CatSearch';
 import CartButton from '../CartButton/CartButton';
 import config from '../config';
 import ItemSquare from '../ItemPage/ItemSquare';
-
-
+import Back from '../Back/Back.js';
 
 
 export default class Shop extends React.Component{
 
   constructor(props) {
     super(props);
-    const { category } = this.props.match.params
-    this.category = category;
+    this.category = this.props.category
     this.state={items:[]};
     this.fetchItem = this.fetchItem.bind(this);
   }
@@ -41,7 +39,7 @@ export default class Shop extends React.Component{
     return(
       <div className="Shop">
         <Dropdown/>
-        <CatSearch/>
+        <Back/>
         <CartButton/>
         <div className="categoryTitle">{this.category}</div>
 

@@ -5,6 +5,7 @@ import Footer from '../Footer/Footer.js';
 import FrontShop from './FrontShop.js';
 import Dropdown from '../Dropdown/Dropdown';
 import CartButton from '../CartButton/CartButton';
+import Back from '../Back/Back.js'
 
 
 
@@ -19,7 +20,7 @@ export default class FrontPage extends React.Component{
         <div className="x2"><img src="https://img.icons8.com/ios-glyphs/30/000000/xbox-cross.png"/></div>
 
         <CartButton/>
-        <CatSearch/>
+        <Back/>
         <Dropdown/>
 
         <FrontShop/>

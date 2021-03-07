@@ -1,10 +1,8 @@
 import React from 'react';
 import './App.css';
 import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
-import config from './config';
+
 import FrontPage from '././FrontPage/FrontPage.js'
-import CatSearch from './CatSearch/CatSearch';
-import Footer from '././Footer/Footer.js'
 import ItemPage from '././ItemPage/ItemPage.js'
 import Shop from '././Shop/Shop.js'
 import SweetShop from '././Shop/SweetShop.js'
@@ -17,6 +15,7 @@ import Registration from '././Registration/Registration.js';
 import UserContext from './UserContext'
 import About from '././About/About.js'
 import Checkout from '././Checkout/Checkout.js'
+
 import { v4 as uuidv4 } from 'uuid';
 import PublicOnlyRoute from './AuthRoutes/PublicRoute';
 import PrivateOnlyRoute from './AuthRoutes/PrivateRoute';

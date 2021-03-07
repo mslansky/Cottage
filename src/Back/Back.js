@@ -8,11 +8,11 @@ export default class Back extends React.Component{
       <div className="Back">
         <div className="Back-round">
          <div className="dropp">
-         <div class="dropdown">
-            <button class="dropbtn">
-              <i class="fa fa-caret-down"></i><img src="https://img.icons8.com/ios-filled/50/000000/weverse-shop.png"/>
+         <div className="dropdown">
+            <button className="dropbtn">
+              <i className="fa fa-caret-down"></i><img src="https://img.icons8.com/ios-filled/50/000000/weverse-shop.png"/>
              </button>
-            <div class="dropdown-content">
+            <div className="dropdown-content">
               <Link to="/Store/101">Maryanne Mixes</Link>
               <Link to="/Store/102">The Goats Plan</Link>
               <Link to="/Store/103">Great Balls of Chocolate</Link>

@@ -64,3 +64,11 @@
   font-size:20px;
   font-family: 'Rubik', sans-serif;
 }
+
+
+@media screen and (min-width: 500px){
+  .cartItemImg Img{
+    width: 25%;
+    height: 25%;
+  }
+}

@@ -16,8 +16,6 @@ export default class About extends React.Component{
         </div>
         <Link to="/"><button className="start">Shop</button></Link>
       
-       
-       
       </div>
     );
   }

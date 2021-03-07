@@ -13,17 +13,11 @@ export default class FrontPage extends React.Component{
   render(){
     return(
       <div className="Front">
-
-       
         <h1 className="bigTitle">Cottage</h1>
-
-
         <CartButton/>
         <Back/>
         <Dropdown/>
-
         <FrontShop/>
-        
        <Footer/>
       </div>
     );

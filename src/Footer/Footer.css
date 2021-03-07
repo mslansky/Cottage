@@ -1,12 +1,12 @@
-.footer{
-  font-family: 'Rubik', sans-serif;
+.Footer{
   position: sticky;
   width: 100%;
+  font-family: 'Rubik', sans-serif;
   background-color: black;
   color: white;
   text-align: center;
-  padding:5px;
-  text-decoration: none;
+  padding:10px;
+  text-decoration: none !important;
   margin-top: 30px;
 }
 
@@ -15,9 +15,12 @@
   font-size: 20px;
   color: white;
   text-decoration: none!important;
-  
+  border:none;
 }
 
+.abt-link a:visited{
+  text-decoration: none!important;
+}
 
 
 

@@ -2,7 +2,6 @@ import React from 'react';
 import "./Shop.css"
 import Footer from '../Footer/Footer.js';
 import Dropdown from '../Dropdown/Dropdown';
-import CatSearch from '../CatSearch/CatSearch';
 import CartButton from '../CartButton/CartButton';
 import config from '../config';
 import ItemSquare from '../ItemPage/ItemSquare';

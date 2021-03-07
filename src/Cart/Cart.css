@@ -21,3 +21,10 @@
   border-style: black;
 }
 
+
+@media screen and (min-width: 500px){
+  .checkout{
+    margin-left:45%;
+  }
+  
+}

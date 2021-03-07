@@ -27,7 +27,7 @@ export default class Footer extends React.Component{
 
   render(){
     return(
-      <div className="footer">
+      <div className="Footer">
         <Link to="/About"><div className="abt-link" key="abt">About</div></Link>
         <Link to="/Register"><div className="abt-link" key="new">New Account</div></Link>
         {this.loginLogoutComponent()}

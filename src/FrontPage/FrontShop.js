@@ -55,4 +55,3 @@ export default class FrontShop extends React.Component{
 
 }
 
-//<div className="grid-item"><img src={random.picUrl} className="gridImg"/></div>

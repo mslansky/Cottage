@@ -9,3 +9,12 @@
   left: 325px;
   z-index: 5;
 }
+
+
+
+@media screen and (min-width: 500px){
+  .cartIcon{
+    width: 35px;
+  }
+  
+}

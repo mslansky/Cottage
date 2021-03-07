@@ -3,8 +3,11 @@ import { Link } from 'react-router-dom'
 import AuthApiService from '../services/auth-api-service'
 import './Registration.css'
 import Footer from '.././Footer/Footer.js';
+import UserContext from '../UserContext';
 
 class Registration extends Component {
+  static contextType = UserContext
+
   static defaultProps = {
     onRegistrationSuccess: () => { }
   }
@@ -21,15 +24,27 @@ class Registration extends Component {
       username: username.value,
       password: password.value,
     })
-      .then(user => {
-        this.props.onRegistrationSuccess({ name, username, password })
+    .then(user => {
+      AuthApiService.postLogin({
+        username: username.value,
+        password: password.value,
+      }).then(res => {
         name.value = ''
         username.value = ''
         password.value = ''
+        this.context.processLogin(res.authToken)
+        this.handleLoginSuccess()
       })
-      .catch(res => {
-        this.setState({ error: res.error })
-      })
+    })
+    .catch(res => {
+      this.setState({ error: res.error })
+    })
+  }
+
+  handleLoginSuccess = () => {
+    const { location, history } = this.props
+    const destination = (location.state || {}).from || '/'
+    history.push(destination)
   }
 
   componentDidMount() {

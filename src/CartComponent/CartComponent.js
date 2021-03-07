@@ -22,7 +22,7 @@ export default class CartComponent extends React.Component{
   }
 
   deleteItem() {
-    fetch(`${config.API_ENDPOINT}/cart/cartItem/${this.props.item.id}`, 
+    fetch(`${config.REACT_APP_API_BASE}/cart/cartItem/${this.props.item.id}`, 
     { method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${config.API_TOKEN}`,
@@ -62,7 +62,7 @@ export default class CartComponent extends React.Component{
 
   updateItem(newItem){
 
-    fetch(`${config.API_ENDPOINT}/cart/cartItem/${this.props.item.id}`, 
+    fetch(`${config.REACT_APP_API_BASE}/cart/cartItem/${this.props.item.id}`, 
     { method: 'POST',
       body: JSON.stringify(newItem),
       headers: {

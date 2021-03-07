@@ -22,7 +22,7 @@ export default class Shop extends React.Component{
   }
 
   fetchItem() {
-    fetch(`${config.API_ENDPOINT}/items/category/${this.category}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/items/category/${this.category}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))

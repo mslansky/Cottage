@@ -48,7 +48,7 @@ export default class ItemPage extends React.Component{
   }
 
   fetchItem() {
-    fetch(`${config.API_ENDPOINT}/items/${this.itemId}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/items/${this.itemId}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))
@@ -61,7 +61,7 @@ export default class ItemPage extends React.Component{
   }
 
   fetchShops() {
-    fetch(`${config.API_ENDPOINT}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))
@@ -74,7 +74,7 @@ export default class ItemPage extends React.Component{
   }
 
   addToCart(itemId){
-    fetch(`${config.API_ENDPOINT}/cart/`, 
+    fetch(`${config.REACT_APP_API_BASE}/cart/`, 
     { method: 'POST',
       body: JSON.stringify({itemId: `${itemId}`, userId: `${this.context.user.id}`, quantity: 1}),
       headers: {

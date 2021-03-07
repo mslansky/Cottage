@@ -43,7 +43,7 @@ export default class Store extends React.Component{
   // }
 
   fetchShops() {
-    fetch(`${config.API_ENDPOINT}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))
@@ -56,7 +56,7 @@ export default class Store extends React.Component{
   }
 
   fetchShopItems() {
-    fetch(`${config.API_ENDPOINT}/items/shop/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/items/shop/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))

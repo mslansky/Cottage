@@ -20,7 +20,7 @@ export default class FrontShop extends React.Component{
   }
 
   fetchRandom() {
-    fetch(`${config.API_ENDPOINT}/items/random`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/items/random`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))

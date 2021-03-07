@@ -23,7 +23,7 @@ export default class Cart extends React.Component{
   }
 
   fetchCart(){
-    fetch(`${config.API_ENDPOINT}/cart/${this.context.user.id}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
+    fetch(`${config.REACT_APP_API_BASE}/cart/${this.context.user.id}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
     .then(response => {
       if(!response.ok)
         return response.json().then(e => Promise.reject(e))

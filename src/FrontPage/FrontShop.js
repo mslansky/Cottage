@@ -43,7 +43,7 @@ export default class FrontShop extends React.Component{
 
          <div className="grid">
          {this.state.random.reverse().map((random, index) => (
-           <ItemSquare item={random}/>
+           <ItemSquare item={random} key="random"/>
           ))}
          
         </div>

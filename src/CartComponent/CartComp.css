@@ -37,6 +37,7 @@
   
 }
 .cartItemName{
+  color: black;
   text-align: center;
   padding-top: 8px;
   padding-bottom: 3px;
@@ -70,5 +71,16 @@
   .cartItemImg Img{
     width: 25%;
     height: 25%;
+  }
+
+  .cartItemName{
+    font-size: 26px;
+  }
+
+  .cartItemPrice{
+    font-size: 26px;
+  }
+  .quantity{
+    font-size: 26px;
   }
 }

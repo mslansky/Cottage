@@ -7,7 +7,7 @@
   position: absolute;
   margin-bottom: 80px;
   top: 0px;
-  left: 150px;
+  left: 120px;
   z-index: 3;
 }
 
@@ -72,4 +72,12 @@
 
 .dropdown:hover .dropdown-content {
   display: block;
+}
+
+@media screen and (min-width: 370px){
+  .dropp{
+    width: 35px;
+    left: 150px;
+  }
+  
 }

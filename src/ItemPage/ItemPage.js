@@ -23,12 +23,15 @@ export default class ItemPage extends React.Component{
     this.state={shops:[], items: []};
     this.fetchShops = this.fetchShops.bind(this);
     this.addToCartButton = this.addToCartButton.bind(this);
+   
   }
  
   componentDidMount(){
     this.fetchItem();
     this.fetchShops();
   }
+
+ 
 
   addToCartButton(items){
     if(!!this.context.user.id){
@@ -129,10 +132,6 @@ export default class ItemPage extends React.Component{
           {this.state.items.reverse().map((items, index) => this.addToCartButton(items))}
 
         </div>
-
-        
-
-
         
         <Footer/>
       </div>

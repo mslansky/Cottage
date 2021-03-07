@@ -104,3 +104,22 @@
   border-radius: 6px;
   border-style: black;
 }
+
+
+.add:hover{
+  background-color: black;
+  color: #F4EDFD;
+}
+
+
+
+@media screen and (min-width: 600px){
+  .add{
+    margin-left: 45%;
+  }
+  
+  .macaron{
+    width: 25%;
+    height: 25%;
+  }
+}

@@ -59,6 +59,7 @@ class Registration extends Component {
         <div role='alert'>
           {error && <p>{error}</p>}
         </div>
+        <p className="qdemo">Want a demo? Visit the login page for information. </p>
         <div>
           Enter your name :
           <input

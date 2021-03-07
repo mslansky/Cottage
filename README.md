@@ -1,70 +1,45 @@
-# Getting Started with Create React App
+## Welcome to Cottage! 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Live Link: https://cottage-lac.vercel.app/
+Link to Github: https://github.com/mslansky/Cottage
 
-## Available Scripts
 
-In the project directory, you can run:
+This fullstack application is my final capstone. Cottage is an E-Commerce Homemade Gourmet Bakery Site
+that allows for users to create a login and shop for local home baked goods! 
 
-### `npm start`
+## Landing page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This introductory page allows for users to sign-up or log in to an account. 
+Then they are able to enter thier name, username, and password. Password must contain an uppercase letter, a lowercase letter, a number and a symbol.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+## Shop Page
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+After logging in, the user views a shop with six random generated items. There is a dropdown to allow the user to explore shops by taste. There is also another dropdown to allow the user to explore specific shops by name. The page also displays a footer that allows for you to login, create a login, logout, and visit the landing page. The page also allows for the user to visit thier cart, once they are logged in. 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Store Page
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+After selecting to search stores by either category or specific names, all of the items of either categories or stores are displayed. When a specific store is displayed the store picture, item, and description are also able to be viewed. From the store pages, items can be selected.
 
-### `npm run eject`
+## Item Page
+When an item is selected the item picture, name, description, price, and store name are also displayed. The store name is a link that allows the user to navigate back to the store. There is also an add to cart button that allows the user to add an item to the cart when they click if they are logged in. If the user is not logged in, they are promoted to log in to access thier cart. 
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Cart Page
+When a user adds items to the cart they are then taken to the cart page. The user is still able to navigate stores from the category dropdown and store dropdown. The item pictures, names, prices, and quantity are displayed. The user is also able to add or subtract item quantities directly from the cart page. The bottom of the cart page has a checkout button that will take the user to a prompt stating that the items will be processed. This is the end of the user stories. 
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech Stack 
+React - React Context Used
+JSX
+JavaScript ES6
+HTML5
+CSS3
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Back-End Technology
+Express.js
+Node.js
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Link to Server-Side Code: https://github.com/mslansky/Cottage-Backend
+Link to Heroku Server-Side Code: https://cottage-backend.herokuapp.com/

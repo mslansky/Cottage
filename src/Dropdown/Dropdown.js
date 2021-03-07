@@ -11,7 +11,7 @@ export default class Dropdown extends React.Component{
               <i className="fa fa-caret-down"></i><img src="https://img.icons8.com/ios-glyphs/30/000000/drag-list-down.png"/>
              </button>
             <div className="dropdown-content">
-              <Link to="/">Home</Link>
+              <Link to="/Home">Home</Link>
               <Link to="/Shop/Sweet" key="sweet" >Sweet</Link>
               <Link to="/Shop/Savory" key="savory">Savory</Link>
               <Link to="/Shop/Satisfying" key="sats">Satisfying</Link>

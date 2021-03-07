@@ -17,6 +17,14 @@ export default class Footer extends React.Component{
     this.context.processLogout()
   }
 
+  registerComponent(){
+    if(!!this.context.user.id){
+      return ''
+    }else{
+      return (<Link to="/Register"><div className="abt-link" key="new">New Account</div></Link>)
+    }
+  }
+
   loginLogoutComponent(){
     if(!!this.context.user.id){
       return (<div className="abt-link"  key="logout" onClick={this.logout}>Logout</div>)
@@ -28,8 +36,8 @@ export default class Footer extends React.Component{
   render(){
     return(
       <div className="Footer">
-        <Link to="/About"><div className="abt-link" key="abt">About</div></Link>
-        <Link to="/Register"><div className="abt-link" key="new">New Account</div></Link>
+        <Link to="/"><div className="abt-link" key="abt">About</div></Link>
+        {this.registerComponent()}
         {this.loginLogoutComponent()}
       </div>
     );

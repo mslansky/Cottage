@@ -39,7 +39,6 @@ export default class CartComponent extends React.Component{
   addItem() {
     this.updateItem({
       id: this.props.item.id, 
-      name: `${this.props.item.name}`, 
       itemId: `${this.props.item.itemId}`, 
       userId: `${this.context.user.id}`, 
       quantity: (parseInt(this.props.item.quantity) + 1).toString()})
@@ -53,7 +52,6 @@ export default class CartComponent extends React.Component{
     } else {
       this.updateItem({
         id: this.props.item.id, 
-        name: `${this.props.item.name}`, 
         itemId: `${this.props.item.itemId}`, 
         userId: `${this.context.user.id}`, 
         quantity: (parseInt(this.props.item.quantity) - 1).toString()})

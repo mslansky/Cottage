@@ -6,6 +6,7 @@ import Back from '../Back/Back.js';
 import CartComponent from '../CartComponent/CartComponent.js'
 import UserContext from '../UserContext'
 import config from '../config';
+import { Link } from "react-router-dom";
 
 
 export default class Cart extends React.Component{
@@ -39,7 +40,7 @@ export default class Cart extends React.Component{
     console.log(itemsJson)
      return `$${itemsJson
         .map(item => parseInt(item.quantity) * parseFloat(item.price.substring(1)))
-        .reduce((itemPrice, total) => total + itemPrice)}`
+        .reduce((itemPrice, total) => total + itemPrice).toFixed(2)}`
   }
 
 
@@ -52,7 +53,7 @@ export default class Cart extends React.Component{
           {this.state.cartItems.map((item) => (<CartComponent item={item} key={item.id} history={this.props.history}/>))}          
           <div className="cartTotal">{this.state.total}</div>
         </div>
-        <button className="checkout">Checkout</button>
+        <Link to="/Checkout"><button className="checkout">Checkout</button></Link>
         <Footer/>
       </div>
     );

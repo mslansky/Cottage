@@ -16,6 +16,10 @@ import Login from '././Login/Login.js';
 import Registration from '././Registration/Registration.js';
 import UserContext from './UserContext'
 import About from '././About/About.js'
+import Checkout from '././Checkout/Checkout.js'
+import { v4 as uuidv4 } from 'uuid';
+import PublicOnlyRoute from './AuthRoutes/PublicRoute';
+import PrivateOnlyRoute from './AuthRoutes/PrivateRoute';
 
 export default class App extends React.Component{
 
@@ -62,15 +66,19 @@ export default class App extends React.Component{
           component= {ItemPage}/>
 
           <Route path='/Store/:storeId'
-          component= {Store}/>
+          render={(props) => <Store {...props} 
+            keyProp={props.match.params.storeId} key={uuidv4()}/>} />
 
-          <Route path='/Cart'
+          <PrivateOnlyRoute path='/Cart'
           component= {Cart}/>
 
-          <Route path='/Login'
+          <PublicOnlyRoute path='/Login'
           component= {Login}/>
 
-          <Route path='/Register'
+          <PrivateOnlyRoute path='/Checkout'
+          component= {Checkout}/>    
+
+          <PublicOnlyRoute path='/Register'
           component= {Registration}/>
     
           </Switch>

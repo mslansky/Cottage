@@ -61,7 +61,7 @@ export class UserProvider extends Component {
   }
 
   setUser = user => {
-    this.setState({ user })
+    this.setState({ user }, console.log("@"))
   }
 
   setWords = words => {
@@ -87,6 +87,7 @@ export class UserProvider extends Component {
   }
 
   processLogout = () => {
+    console.log("!")
     TokenService.clearAuthToken()
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
@@ -97,7 +98,6 @@ export class UserProvider extends Component {
     TokenService.clearAuthToken()
     TokenService.clearCallbackBeforeExpiry()
     IdleService.unRegisterIdleResets()
-    this.setUser({ idle: true })
   }
 
   fetchRefreshToken = () => {

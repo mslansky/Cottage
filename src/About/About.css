@@ -1,6 +1,7 @@
 .About{
   background-color: black;
-  padding-bottom: 15px;
+  padding-bottom: 35px;
+  margin-bottom: 300px;
 }
 
 .abt-title{
@@ -33,4 +34,5 @@
   background-color: white;
   border-radius: 6px;
   border-style: none;
+  margin-bottom: 150px;
 }

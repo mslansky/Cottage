@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 import AuthApiService from '../services/auth-api-service'
 import './Registration.css'
+import Footer from '.././Footer/Footer.js';
 
 class Registration extends Component {
   static defaultProps = {
@@ -44,7 +45,7 @@ class Registration extends Component {
           {error && <p>{error}</p>}
         </div>
         <div>
-          Enter your name
+          Enter your name :
           <input
             ref={this.firstInput}
             id='registration-name-input'
@@ -54,7 +55,7 @@ class Registration extends Component {
           />
         </div>
         <div>
-          Choose a username
+          Choose a username : 
           <input
             id='registration-username-input'
             name='username'
@@ -63,7 +64,7 @@ class Registration extends Component {
           />
         </div>
         <div>
-          Choose a password
+          Choose a password : 
           <input
             id='registration-password-input'
             name='password'
@@ -72,22 +73,13 @@ class Registration extends Component {
             className="password-input"
           />
         </div>
-        <footer>
+        
           <button type='submit' className="signup">
             Sign up
           </button>
-          {' '}
-          <div className="logflex">
-            <div className="accountflex">
-              <Link to='/login'>Already have an account? </Link>
-            </div>
-            <div className="demoflex">
-              <Link to='/login'> Want a Demonstration?</Link>
-            </div>
-          </div>
-          
-        </footer>
+         
       </form>
+      <Footer/>
       </div>
     )
   }

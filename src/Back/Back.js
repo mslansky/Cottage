@@ -1,15 +1,8 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import "./Back.css"
-import config from '../config';
-
 
 export default class Back extends React.Component{
-
-
-
- 
-
   render(){
     return(
       <div className="Back">

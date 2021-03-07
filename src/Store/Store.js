@@ -15,7 +15,9 @@ export default class Store extends React.Component{
 
   constructor(props) {
     super(props);
+    
     const { storeId } = this.props.match.params
+    console.log(storeId);
     this.shopsid = storeId;
     this.state={shops:[], items: []};
     this.fetchShops = this.fetchShops.bind(this);
@@ -30,6 +32,15 @@ export default class Store extends React.Component{
     this.fetchShops();
     this.fetchShopItems();
   }
+
+  // componentDidUpdate(prevProps, prevState, snapshot) {
+  //   // Check to see if the "applied" flag got changed (NOT just "set")
+  //   if (this.props.location.state.storeId && !prevProps.location.state.storeId) {
+  //     let storeId = this.props.location.state.storeId;
+  //     // Do stuff here 
+  //     console.log(storeId)
+  //   }
+  // }
 
   fetchShops() {
     fetch(`${config.API_ENDPOINT}/shops/${this.shopsid}`, { headers: {'Authorization': `Bearer ${config.API_TOKEN}`}})
@@ -62,7 +73,7 @@ export default class Store extends React.Component{
     return(
       <div className="store-page">
         <Dropdown/>
-        <Back/>
+        <Back history={this.props.history}/>
         <CartButton/>
 
         <div className="store-front">

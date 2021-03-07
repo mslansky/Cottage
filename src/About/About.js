@@ -1,6 +1,5 @@
 import React from 'react';
 import "./About.css"
-import Footer from ".././Footer/Footer.js"
 import { Link } from "react-router-dom";
 
 
@@ -17,7 +16,7 @@ export default class About extends React.Component{
         </div>
         <Link to="/"><button className="start">Shop</button></Link>
       
-        <Footer/>
+       
        
       </div>
     );

@@ -8,23 +8,3 @@
   
 }
 
-.x1{
-  position: relative;
-  display: block;
-  margin-top: 0px;
-  margin-left: auto;
-  margin-right: auto;
-  top: 85px;
-  left: 55px;
- 
-}
-
-.x2{
-  position: relative;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  top: -55px;
-  left: 300px;
-}
-

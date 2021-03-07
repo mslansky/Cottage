@@ -60,6 +60,8 @@ class Login extends Component {
         
         <h1 className="bigTitle">Cottage</h1>
        
+        <p className="demo">Demo Username : Demo </p>
+        <p className="demo">Demo Password : Demo123! </p>
 
         <div>
           Username: 

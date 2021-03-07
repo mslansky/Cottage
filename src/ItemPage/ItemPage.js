@@ -85,6 +85,9 @@ export default class ItemPage extends React.Component{
         return response.json().then(e => Promise.reject(e))
       return response.json()
     })
+    .then(json => {
+      this.props.history.push('/Cart')
+    })
   }
 
   render(){

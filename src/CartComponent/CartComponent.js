@@ -56,7 +56,7 @@ export default class CartComponent extends React.Component{
         name: `${this.props.item.name}`, 
         itemId: `${this.props.item.itemId}`, 
         userId: `${this.context.user.id}`, 
-        quantity: `${parseInt(this.props.item.quantity) - 1}}`})
+        quantity: (parseInt(this.props.item.quantity) - 1).toString()})
     }
   }
 

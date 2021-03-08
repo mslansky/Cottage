@@ -3,7 +3,7 @@ import "./Checkout.css"
 import Dropdown from '.././Dropdown/Dropdown.js';
 import Back from '.././Back/Back.js';
 import Footer from '.././Footer/Footer.js';
-// import { Link } from "react-router-dom";
+
 
 
 export default class Checkout extends React.Component{

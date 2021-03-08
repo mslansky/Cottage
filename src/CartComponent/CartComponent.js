@@ -3,7 +3,7 @@ import "./CartComp.css"
 import config from '../config';
 import ItemSquare from '../ItemPage/ItemSquare';
 import UserContext from '../UserContext';
-import { useHistory } from 'react-router'
+
 
 
 
